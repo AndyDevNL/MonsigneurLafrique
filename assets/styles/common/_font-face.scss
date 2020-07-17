@@ -1,0 +1,10 @@
+/** Webfonts */
+@font-face {
+  font-family: 'MontHeavy';
+  // src: url("wp-content/themes/monsigneurl'afrique/assets/fonts/Mont-HeavyDEMO.ttf");
+  // src: url("wp-content/themes/monsigneurl'afrique/assets/fonts/Mont-HeavyDEMO.eot?#iefix") format('embedded-opentype'),
+     src: url("../fonts/Mont-HeavyDEMO.woff") format('woff');
+  //      url("wp-content/themes/monsigneurl'afrique/assets/fonts/Mont-HeavyDEMO.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal; 
+}

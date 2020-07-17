@@ -1,0 +1,36 @@
+/*
+ * Theme Name: Monsigneur Lafrique
+ * Description: Theme for Sigmar Vriesde
+ * Author: Andreas Sharoubim
+ * version: 1.0.1
+*/
+
+/** Import everything from autoload */
+// @import "./autoload/**/*";
+
+/** Import theme styles */
+@import "vendor/materialize";
+@import "common/variables";
+@import "common/font-face";
+@import "common/normalize";
+@import "common/scaffolding";
+@import "common/helpers";
+@import "common/global";
+@import "components/text";
+@import "components/title";
+@import "components/footer";
+@import "components/header";
+@import "components/content";
+@import "components/icon";
+@import "nav/nav-primary";
+@import "nav/nav-toggle";
+@import "nav/nav-sec";
+
+
+
+
+
+
+
+
+

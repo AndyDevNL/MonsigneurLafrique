@@ -1,0 +1,103 @@
+.header {
+  margin-bottom: 50px;
+  position: fixed;
+  max-height: 100px;
+  // overflow: hidden;
+
+  &__title {
+    position: absolute;
+    top: 80%;
+    left: 0;
+    background-color: $secondary-color;
+    padding-left: 5%;
+    padding-top: 1.75%;
+    height: 20%;
+    width: 100%;
+    z-index: 101;
+  }
+
+  &__nav {
+    position: relative;
+    background: $black;
+    // top: 25px;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+  }
+
+  &__navElem {
+    display: inline-block;
+
+    &--logo {
+      height: 10rem;
+    }
+
+    &--nav {
+      position: absolute;
+      height: 100vh;
+      width: 100vw;
+      left: 0;
+      top: -100vh;
+      background-color: $black;
+      opacity: 0.8;
+      z-index: 300;
+      transition: 0.3s ease;
+    }
+
+    &--burger {
+      position: absolute;
+      top: 2vh;
+      right: $spacer;
+      z-index:400;
+    }
+
+    &--mainIcon {
+      position: absolute;
+      top: 1.5vh;
+      left: $spacer;
+      width: 200px;
+      z-index: 400;
+    }
+  }
+}
+
+.is-scrolled {
+  .header {
+      &__nav {
+      left: 0;
+      width: 100%;
+      z-index: 200;
+      background: $black;
+    }
+  }
+}
+
+.active-nav {
+  .header {
+    &__navElem {
+      &--nav {
+        top: 0;
+      }
+    }
+  }
+}
+
+// @media #{$medium-and-up} {
+//   .header{
+//     &__navElem {
+//       &--mainIcon {
+//         width: 200px;
+//       }
+//     } 
+//   }
+// }
+
+// @media #{$large-and-up} {
+//   .header{
+//     &__navElem {
+//       &--mainIcon {
+//         width: 10vw;
+//       }
+//     } 
+//   }
+// }

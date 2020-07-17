@@ -1,0 +1,55 @@
+{% if post.meta('menu_colors') %}
+    <style>
+        .customPageNav > .nav-bar{
+            background-color: {{ post.meta('menu_colors').text_color}};
+        }
+
+        .customPageNav:hover > .nav-bar {
+            background-color: {{post.meta('menu_colors').text_hover}};
+        }
+    </style>         
+    {% else %}
+    <style>
+        .customPageNav > .nav-bar{
+            background-color: blue;
+        }
+
+        .customPageNav:hover > .nav-bar{
+            background-color: red
+        }
+    </style>                    
+{% endif %}
+
+<header class="header container headerContainer">
+<div class="row header__nav">
+  <div class="header__navElem header__navElem--logo col s12 m3 l4">
+  </div>
+    <div class="header__navElem header__navElem--mainIcon">
+      <a class="LogoLink" href="{{site.url}}" rel="home">
+            {% include "svg/monsigneur.svg" %}
+      </a>
+    </div>
+
+    {% include 'navheader.twig' %}
+    <div class="header__navElem header__navElem--burger">
+      <a class="customPageNav nav-toggle" href="#">
+        <div class="nav-bar nav-bar--1"></div>
+        <div class="nav-bar nav-bar--2"></div>
+        <div class="nav-bar nav-bar--3"></div>
+      </a>
+    <div>  
+  </div>
+  {# <div class="header__slider">
+    <div class="single-slide">
+      <img class="single-slide__image" src="{{ Image(post.meta('slider_image')).src }}" />
+      <div class="single-slide__overlay">
+      hi
+      </div>
+      <div class="single-slide__text">
+        <h1 class="text text--slider">
+          {{ post.meta('slider_text') }}
+        </h1>
+      </div>
+    </div>
+  </div> #}
+</header>

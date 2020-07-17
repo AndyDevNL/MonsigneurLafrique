@@ -1,0 +1,16 @@
+.SecondaryMenu {
+  margin: 0;
+
+  &__item {
+    margin: 1rem 0;
+    a {
+      color: $primary-color;
+    }
+  }
+
+  &__item:hover {
+    a {
+      color: $white;
+    }
+  }
+}

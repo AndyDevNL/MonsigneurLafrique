@@ -1,0 +1,57 @@
+.footer {
+  background-color: $black;
+  height: 100px;
+  position: relative;
+
+  &__contact {
+
+  }
+
+  &__secMenu {
+
+  }
+
+  // &__menu {
+  //   height: 50px;
+  //   width: 100%;
+  // }
+
+  // &__menuItem {
+  //   display: inline-block;
+  //   width: 20%;
+  //   // float: left;
+  //   font-size: 50px;
+  //   background: blue;
+    
+  //   svg {
+  //     height: 100%;
+  //     width: 100%;  
+  //   }
+  // }
+  &__menu {
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    // top: $spacer;
+    ul {
+      padding: 0;
+      // margin: 0;
+    }
+
+    li {
+      margin-right: $spacer;
+
+      &:focus,
+      &:hover {
+        a {
+          svg {
+            // fill: $secondary-color;
+          }
+          color:yellow;
+        }
+      }
+    }
+  }
+}

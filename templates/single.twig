@@ -1,0 +1,78 @@
+{# {% extends "base.twig" %}
+
+{% block content %}
+	<div class="content-wrapper">
+		<article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+			<img src="{{ post.thumbnail.src|resize(1200, 300) }}">
+			<section class="article-content">
+				
+				<h1 class="article-h1">{{ post.title }}</h1>
+
+				<a href="{{ post.link }}">{{ _e('edit') }}</a>
+				<p class="blog-author">
+					<span>By</span><a href="{{post.author.path}}"> {{ post.author.name }} </a><span>&bull;</span> {{ post.date }}
+				</p>
+				<div class="article-body">
+					{{post.content}}
+				</div>
+			</section>
+		</article>
+	</div><!-- /content-wrapper -->
+{% endblock %} #}
+
+{% extends "base.twig" %}
+{% block header %}
+<header class="header container headerContainer">
+  {% include 'navheader.twig' %}
+
+  <div class="header__image">
+    {% if post.get_thumbnail %}
+      <img class="image image__banner" src="{{post.thumbnail.src}}" />
+    {% endif %}  
+  </div>
+
+  <div class="header__title">
+    <h1 class="title title--pageBanner">{{ post.title }}</h1>
+  </div>
+</header>
+{% endblock %}
+
+{% block content %}
+  <div class="row contentBody">
+    <article class="col s12 m8 contentBody__content post-type-{{post.post_type}}" id="post-{{post.ID}}">
+      <p class="blog-author">
+          <span>By</span><a href="{{post.author.path}}"> {{ post.author.name }} </a><span>&bull;</span> {{ post.date }}
+        </p>
+      <section class="article-content">
+        <div class="article-body">
+          {{post.content}}
+        </div>
+      </section>
+    </article>
+  
+    <div class="col s12 m4 side-bar contentBody__sidebar ">
+      <h2 class="title title--med">Agenda</h2>
+      <ul>
+        <li>item1</li>
+        <li>item1</li>
+        <li>item1</li>
+      </ul>
+    </div>
+  
+  </div>
+{% endblock %}
+
+
+{#     <section id="content" role="main" class="content-wrapper">
+      {% if title %}<h1>{{title}}</h1>{% endif %}
+      <div class="wrapper {{sidebar_class}}">
+        {% block content %}
+          Sorry, no content
+        {% endblock %}
+      </div>
+      {% if sidebar %}
+        <aside class="layout-sidebar">
+          {{sidebar}}
+        </aside>
+      {% endif %}
+    </section> #}

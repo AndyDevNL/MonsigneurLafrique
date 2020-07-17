@@ -1,0 +1,51 @@
+.nav-toggle {
+    display: inline-block;
+    height: 42px;
+    // position: fixed;
+    // top: 60px;
+    transition: 0.25s ease;
+    // right: 80px;
+    width: 50px;
+    z-index: 400;
+  
+    .nav-bar {
+      background-color: $white;
+      height: 10px;
+      position: absolute;
+      transition: 0.2s;
+      width: 50px;
+  
+      .active-nav & {
+      }
+  
+      &--1 {
+        top: 0;
+  
+        .active-nav & {
+          transform: rotate(45deg);
+        }
+      }
+  
+      &--2 {
+        top: 16px;
+  
+        .active-nav & {
+          top: 0;
+          transform: rotate(-45deg);
+        }
+      }
+  
+      &--3 {
+        bottom: 0;
+        .active-nav & {
+          display: none;
+        }
+      }
+    }
+  
+    @media #{$small-and-down} {
+      transform: scale(0.8);
+      right: $spacer;
+      top: $spacer * 2;
+    }
+  }

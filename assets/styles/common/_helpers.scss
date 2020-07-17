@@ -1,0 +1,246 @@
+/* ==========================================================================
+  Helpers
+  ========================================================================== */
+
+/* Lists =================================================================== */
+.list--unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+/* Resets both margin and padding ========================================== */
+.list--clean {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Standard horizontal list */
+.list--inline {
+  @extend .list--unstyled;
+
+  > li {
+    display: inline-block;
+  }
+}
+
+/* Clearfix */
+.clearfix {
+  &::before,
+  &::after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+
+  &::after {
+    clear: both;
+  }
+
+  .lt-ie9 & {
+    zoom: 1;
+  }
+}
+
+.clear-padding {
+  margin-left: $gutter-width * -1;
+  margin-right: $gutter-width * -1;
+}
+
+/* Box shadow */
+.box-shadow {
+  box-shadow: 0 2px 2px rgba($black, 0.4);
+}
+
+.input-box-shadow {
+  box-shadow: 0 2px 4px -2px rgba($black, 0.2) inset;
+}
+
+.input-box-shadow-focus {
+  box-shadow: 0 2px 4px -2px rgba($black, 0.4) inset;
+}
+
+/* Background color ======================================================== */
+// .bg--black {
+//   background-color: $black;
+// }
+
+// .bg--white {
+//   background-color: $white;
+// }
+
+/* Color =================================================================== */
+// .c--black {
+//   color: $black;
+// }
+
+// .c--white {
+//   color: $white;
+// }
+
+/* Fonts =================================================================== */
+// .f--light {
+//   font-weight: 300;
+// }
+
+// .f--regular {
+//   font-weight: 400;
+// }
+
+// .f--medium {
+//   font-weight: 500;
+// }
+
+/* Text ==================================================================== */
+.t--lower {
+  text-transform: lowercase;
+}
+
+.t--upper {
+  text-transform: uppercase;
+}
+
+.t--left {
+  text-align: left;
+}
+
+.t--right {
+  text-align: right;
+}
+
+.t--center {
+  text-align: center;
+}
+
+.td--none {
+  text-decoration: none;
+}
+
+.t--color-white {
+  color: $white;
+}
+
+/* Non-semantic helpers ==================================================== */
+.clear {
+  clear: both;
+}
+
+.pull-left {
+  float: left !important;
+}
+
+.pull-right {
+  float: right !important;
+}
+
+.strong {
+  font-weight: 600;
+}
+
+.underline {
+  border-bottom: 1px solid;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+/* Responsive embeds (useful for video iframe and such) ==================== */
+.responsive-media {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+
+  img,
+  iframe,
+  embed,
+  object,
+  .responsive-media__item {
+    border: 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  img {
+    object-fit: cover;
+  }
+
+  &.responsive-media--16-9 {
+    padding-bottom: 56.25%;
+  }
+
+  &.responsive-media--5-2 {
+    @extend .responsive-media--16-9;
+
+    @media #{$medium-and-up} {
+      // which is actually 5 to 2
+      padding-bottom: 40%;
+    }
+  }
+
+  &.responsive-media--3-2 {
+    padding-bottom: 66.6667%;
+  }
+
+  &.responsive-media--4-3 {
+    padding-bottom: 75%;
+  }
+
+  &.responsive-media--5-4 {
+    padding-bottom: 80%;
+  }
+
+  &.responsive-media--1-1 {
+    padding-bottom: 100%;
+  }
+}
+
+/**
+ * Hide from screenreaders and browsers
+ * Credit: HTML5 Boilerplate
+ */
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Hide only visually, but have it available for screenreaders */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+// .opaque {
+//     @include opacity(0);
+// }
+
+/**
+ * Avoiding DOM flickering
+ * Made possible by adding the class `.js` to the <html> node
+ */
+.js .show-if-js,
+.hide-if-js {
+  display: block;
+}
+
+.js .hide-if-js,
+.show-if-js {
+  display: none;
+}

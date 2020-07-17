@@ -1,0 +1,13 @@
+<style>
+    .contentBody__article { 
+        color: {{contentBlock.text_group.text_color}};
+        background: {{contentBlock.background_color}} url({{ Image(contentBlock.background_image).src }}) no-repeat;
+        background-position: bottom right;
+        background-size: contain;
+        padding: 5% !important;
+    }
+</style>
+<div class="col s12 contentBody__article">
+    <p class="text">{{contentBlock.text_group.text}}</p>
+    {{contentBlock.text_field}}
+</div>

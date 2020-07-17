@@ -1,0 +1,9 @@
+/** Webfonts */
+@font-face {
+    font-family: MontHeavy;
+    src: url('http://localhost:1234/Sigmar/wordpress/wp-content/fonts/Mont-HeavyDEMO.ttf') format('truetype');
+}
+@font-face {
+    font-family: HelveticaNeue;
+    src: url('http://localhost:1234/Sigmar/wordpress/wp-content/fonts/HelveticaNeue.ttf') format('truetype');
+}

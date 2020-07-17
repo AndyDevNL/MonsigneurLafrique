@@ -1,0 +1,26 @@
+.icon {
+  &--smsvg{
+  }
+  &--main {
+    fill: $white;
+    &:hover{
+      fill: $secondary-color;
+    }
+  }
+}
+
+.MainIcon {
+  // position: absolute;
+  // top: 3rem;
+  // left: 10rem;
+  height: inherit;
+  width: 40%;
+  padding-left: 10%;
+  padding-top: 2%;
+}
+
+.is-scrolled {
+  .MainIcon {
+    width: 40%;
+  }
+}

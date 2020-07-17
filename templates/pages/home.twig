@@ -1,0 +1,26 @@
+{% extends "base.twig" %}
+
+{% block content %}
+  <div class="row contentBody">
+    <article class="col s12 m8 contentBody__content post-type-{{post.post_type}}" id="post-{{post.ID}}">
+      <section class="article-content">
+        <h1 class="title title--med">{{post.title}}</h1>
+        <div class="article-body">
+          {# {% for post in posts %}
+            {% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
+          {% endfor %} #}
+        </div>
+      </section>
+    </article>
+  
+{#     <div class="col s12 m4 side-bar contentBody__sidebar ">
+      <h2 class="title title--med">Agenda</h2>
+      <ul>
+        <li>item1</li>
+        <li>item1</li>
+        <li>item1</li>
+      </ul>
+    </div> #}
+  
+  </div>
+{% endblock %}

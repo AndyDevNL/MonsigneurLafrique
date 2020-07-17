@@ -1,0 +1,22 @@
+.contentBody {
+  padding-top: 100px;
+
+  &__half {
+    height: 80vh;
+    // margin-top: 100px;
+    padding: $spacer !important; 
+  }
+
+  &__article {
+    min-height: 80vh;
+    background: $secondary-color;
+  }
+
+  &__image {
+    object-fit: cover;
+
+    &--background {
+      
+    }
+  }
+}

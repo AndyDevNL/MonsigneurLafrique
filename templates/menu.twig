@@ -1,0 +1,85 @@
+{% if post.meta('menu_colors') %}
+    <style>
+        .customPageColors {
+            color: {{ post.meta('menu_colors').text_color}};
+        }
+
+        .customPageColors:hover {
+            color: {{post.meta('menu_colors').text_hover}};
+        }
+    </style>         
+    {% else %}
+    <style>
+        .customPageColors {
+            color: blue;
+        }
+
+        .customPageColors:hover {
+            color: red
+        }
+    </style>                    
+{% endif %}
+
+{% if PrimaryMenu %}
+    <div class="PrimaryMenu">
+        <div class="row">
+            {% for item in PrimaryMenu.items %}
+              <div class="col s12 m6">
+                  <div class="PrimaryMenu__Block">
+                        <h2 class="PrimaryMenu__Item PrimaryMenu__NavItem title title__nav customPageColors {{ item.classes | join(' ') }}">
+                            <a class="link customPageColors" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+                        </h2>
+                        {% if item.children %}
+                            <div class="PrimaryMenu__Block--children">
+                                {% for child in item.children %}
+                                    <h3 class="PrimaryMenu__Item PrimaryMenu__NavItem title title__nav customPageColors {{ item.classes | join(' ') }}">
+                                        <a class="link customPageColors" href="{{ child.link }}">{{ child.title }}</a>
+                                    </h3>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                  </div>
+              </div>  
+        
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}
+
+    <!-- <ul class="PrimaryMenu header__element">
+    {% for item in PrimaryMenu.items %}
+          
+      <li class="PrimaryMenu__Item PrimaryMenu__NavItem {{ item.classes | join(' ') }}">
+        <a class="link" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+         {% if item.children %}
+              <ul class="PrimaryMenu__dropMenu hiddenMenu">
+                  {% for child in item.children %}
+                      <li class="PrimaryMenu__dropItem">
+                          <a class="dropLink" href="{{ child.link }}">{{ child.title }}</a>
+                      </li>
+                  {% endfor %}
+              </ul>
+          {% endif %}
+      </li>
+
+    {% endfor %}
+    </ul> -->
+
+{# <nav>
+    <ul class="nav-main">
+        {% for item in menu.items %}
+            <li class="nav-main-item {{ item.classes|join(' ') }}">
+                <a class="nav-main-link" href="{{ item.link }}">{{ item.title }}</a>
+                {% if item.children %}
+                    <ul class="nav-drop">
+                        {% for child in item.children %}
+                            <li class="nav-drop-item">
+                                <a href="{{ child.link }}">{{ child.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</nav> #}

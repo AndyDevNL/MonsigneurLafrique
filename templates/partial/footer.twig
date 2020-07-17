@@ -1,0 +1,59 @@
+{% if post.meta('menu_colors') %}
+    <style>
+        .customPageColorsIcons {
+            fill: {{ post.meta('menu_colors').text_color}};
+        }
+
+        .customPageColorsIcons:hover {
+            fill: {{post.meta('menu_colors').text_hover}};
+        }
+    </style>         
+    {% else %}
+    <style>
+        .customPageColorsIcons {
+            fill: blue;
+        }
+
+        .customPageColorsIcons:hover {
+            fill: red
+        }
+    </style>                    
+{% endif %}
+
+{% block footer %}
+  <footer class="footer" id="footer">
+    <div class="container footerContainer">
+      <div class="row footer__menu">
+        <ul class="footer__list list--inline">
+          <li class="customPageColorsIcons footer__menuItem">
+            <a href={{ user_sigmar.meta('social_media_facebook_url') }} target="_blank">
+              {% include "svg/facebook.svg" %}
+            </a>
+          </li>
+          <li class="customPageColorsIcons footer__menuItem">
+            <a href={{ user_sigmar.meta('social_media_twitter_url') }} target="_blank">
+              {% include "svg/twitter.svg" %}
+            </a>
+          </li>
+          <li class="customPageColorsIcons footer__menuItem">
+            <a href={{ user_sigmar.meta('social_media_pinterest_url') }} target="_blank">
+              {% include "svg/pinterest.svg" %}
+            </a>
+          </li>
+          <li class="footer__menuItem">
+            <a href={{ user_sigmar.meta('social_media_instagram_url') }} target="_blank">
+              {% include "svg/instagram.svg" %}
+            </a>
+          </li>
+          <li class="footer__menuItem">
+            <a href={{ user_sigmar.meta('social_media_linkedin_url') }} target="_blank">
+              {% include "svg/linkedin.svg" %}
+            </a>
+          </li>
+        </ul> 
+      </div>
+    </div>
+    {# Copyright {{"now"|date('Y')}} #}
+  </footer>
+  {{ function('wp_footer') }}
+{% endblock %}

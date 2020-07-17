@@ -1,0 +1,131 @@
+.PrimaryMenu {
+  padding-top: 100px;
+  width: 90vw;
+  margin: 0 auto;
+  display: block;
+  
+  &__Block {
+    border-top: white 1px solid;
+    margin-top: 3%;
+    
+    &--children {
+      padding: 5px;
+      display: block;
+    }
+  }
+
+  &__NavItem {
+    display: block;
+
+    .link {
+      // font-size: $title-size-menu;
+    }
+  }
+
+  &__NavItem:hover {
+    // text-decoration: underline;
+    
+    .link {
+      // text-decoration: underline;
+    }
+  }
+}
+
+@media #{$medium-and-up} {
+  .PrimaryMenu {
+    padding-top: 100px;
+    width: 90vw;
+    margin: 0 auto;
+    display: block;
+
+    &__Block {
+      border-top: white 1px solid;
+      
+      &--children {
+        padding: 5px;
+        display: block;
+      }
+    }
+  
+    &__NavItem {
+      .link {
+        // font-size: $title-size-menu;
+      }
+    }
+  }
+}
+
+// .PrimaryMenu {
+//   margin-top: 2rem;
+
+//   &__Item {
+//     display: inline-block;
+//   } 
+
+//   &__NavItem {
+//     color: $white;
+//     position: relative;
+//     margin: 0 3%;
+
+//     .link {
+//       color: $white;
+//       font-size: $title-size-menu;
+//     }
+//   }
+
+//   &__NavItem:hover {
+//     color: $primary-color;
+    
+//     .link {
+//       color: $primary-color;
+//     }
+//   }
+
+//   &__dropMenu {
+//     position: absolute;
+//     background-color: $white;
+//     width: 100%;
+//   }
+
+//   &__dropItem{
+//     color: $black;
+//     padding: 10%;
+
+//     .dropLink {
+//       color: $black;
+//     }
+//   }
+
+//   &__dropItem:hover {
+//     color: $primary-color;
+
+//     .dropLink {
+//       color: $primary-color;
+//     }
+//   }
+// }
+
+.hiddenMenu {
+    display: none;  
+}
+
+// .is-scrolled {
+//   // .PrimaryMenu {
+//   //   &__NavItem {
+//   //     color: $primary-color;
+
+//   //     .link {
+//   //       color: $primary-color;
+//   //       font-size: $title-size-menu;
+//   //     }
+//   //   }
+
+//   //   &__NavItem:hover {
+//   //     color: $secondary-color;
+      
+//   //     .link {
+//   //       color: $secondary-color;
+//   //     }
+//   //   }
+//   // }
+// }

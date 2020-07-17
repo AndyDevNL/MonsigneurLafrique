@@ -1,0 +1,27 @@
+.title {
+  font-family: arial;
+
+  color: $secondary-color;
+  
+  &__nav{
+    font-size: $title-size-med;
+  }
+
+  &--med {
+    font-size: $title-size-med;
+  }
+
+  &--pageBanner {
+    color: $white;
+    font-size: $title-size-med;
+  }
+
+  &--secMenu {
+    color: $primary-color;
+    font-size: 2rem;
+  }
+
+  &__tease {
+    font-size:$title-size-tease
+  }
+}

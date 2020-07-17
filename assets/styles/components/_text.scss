@@ -1,0 +1,22 @@
+.text {
+  font-family: arial;
+  font-size: $text-size;
+
+  &--slider {
+    color: $white;
+    font-size: 3rem;
+  }
+
+  &--footer{
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  &__tease {
+    &--date {
+      font-size: $text-size-small;
+      color: $primary-color;
+      margin: 0 !important;
+    }
+  }
+}

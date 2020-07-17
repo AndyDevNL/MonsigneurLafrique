@@ -1,0 +1,19 @@
+{% extends "tease.twig" %}
+
+{% block content %}
+<div class="row tease tease-{{post.post_type}}" id="tease-{{post.ID}}">
+  {% if post.get_thumbnail %}
+    <div class="col s12 m3 tease__thumb">
+      <img src="{{post.thumbnail.src}}" alt="" class="tease__image">
+    </div>
+  <div class="col s12 m9 tease__content">
+  {% else %} 
+  <div class="col s12 tease__content">
+  {% endif %}
+  
+    <h1 class="title title__tease"><a href="{{post.link}}">{{post.title}}</a></h1>
+    <p class="text text__tease--date">{{ post.date }}</p>
+    <p class="text text__tease">{{ post.preview }}</p>
+  </div>
+</div>
+{% endblock %}

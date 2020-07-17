@@ -1,0 +1,73 @@
+<style>
+    .contentBody__left {
+        color: {{contentBlock.text_group.text_color}};
+        background: {{contentBlock.background_color}} url({{ Image(contentBlock.background_image).src }}) no-repeat;
+        background-position: {{contentBlock.background_vertical}} {{contentBlock.background_horizontal}};
+        background-size: contain;
+        position: relative;
+    }
+
+    .contentBody__left > div > h1> span{
+        line-height: {{contentBlock.text_group.line_height}}
+    }
+
+    /* allignment vertical top*/
+    .text-top-left {
+
+    }
+
+    .text-top-center {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .text-top-right {
+        float: right;
+    }
+
+    /* Allignment vertical center*/
+    .text-center-left {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    } 
+
+    .text-center-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .text-center-right {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(-2rem, -50%);
+    }
+
+    /* Allignment vertical bottom */
+    .text-bottom-left {
+        position: absolute;
+        bottom: 2rem;
+        transform: translateY(-2rem);
+    } 
+
+    .text-bottom-center {
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translate(-50%, -2rem);
+    }
+
+    .text-bottom-right {
+
+    }
+
+</style>
+<div class="col s12 m6 contentBody__half contentBody__left">
+    <div class="text text-{{contentBlock.text_group.text_vertical}}-{{contentBlock.text_group.text_horizontal}}">{{contentBlock.text_group.text}}</div>
+    {# <img class="contentBody__image--background" src="{{ Image(contentBlock.background_image).src }}" alt=""> #}
+    {# {{ path }}wp-content/themes/MonsigneurL'Afrique/fonts/fonts.css #}
+</div>

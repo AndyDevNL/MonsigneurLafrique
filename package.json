@@ -13,6 +13,6 @@
   "license": "ISC",
   "dependencies": {
     "materialize-css": "^1.0.0",
-    "node-sass": "^4.11.0"
+    "node-sass": "^7.0.0"
   }
 }
